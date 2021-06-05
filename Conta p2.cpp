@@ -50,10 +50,10 @@ struct Conta abrirConta( char nome[80]){
     float saque(float saldo, float valor){
         if(valor <= saldo ){
             saldo = saldo - valor;
-            printf("\n**********\n");
+            printf("\n*****************\n");
             printf("Saque realizado!.\n");
             printf("Saldo da conta: R$ %.2f", saldo);
-            printf("\n**********\n");
+            printf("\n*****************\n");
             return saldo;
         }else{
             printf("Saldo insuficiente\n");
@@ -72,9 +72,9 @@ int main ()
     float valor_saque;
     int opcao;
 
-    printf("\n**********\n");
+    printf("\n*************************\n");
     printf("   CADASTRO DE CONTA\n");
-    printf("\n**********\n");
+    printf("\n*************************\n");
     printf("Digite seu nome:\n");
     fgets(nome, 80, stdin);
     printf("\nDigite seu CPF:\n");
@@ -107,9 +107,10 @@ int main ()
     system("cls");
 
     do{
-        printf("\n**********\n");
+        printf("\n*******************\n");
         printf("   MENU PRINCIPAL\n");
-        printf("\n**********\n");
+        printf("\n*******************\n");
+        printf("\nSaldo em conta: %.2f\n\n", conta.saldo);
         printf("1. Deposito:\n");
         printf("2. Saque:\n");
         printf("3. Sair:\n");
